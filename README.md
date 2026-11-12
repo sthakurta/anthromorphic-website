@@ -17,9 +17,9 @@ npm run dev
 npm run build
 ```
 
-## Deploy on Cloudflare Pages
+## Deploy
 
-Connect this repository as a Pages project. Framework preset: **Vite**; build command: `npm run build`; output directory: `dist`; root directory: repository root. Node version: 20 or 22. Add the custom domain only after reviewing the generated Pages preview. Preserve all existing mail DNS records when updating website DNS.
+Production deploys through Cloudflare Workers Builds on the Worker `anthromorphic-website`, connected to this repository. A push to the production branch (`main`) builds with `npm run build` and deploys. Other branches are preview builds and do not replace production. `wrangler.jsonc` serves `dist` as a single-page app, so `/thesis` loads on a direct request. Preserve all existing mail DNS records when updating website DNS.
 
 ## Contact
 
